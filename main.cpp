@@ -8,6 +8,7 @@
 #include <vector>
 
 int start(std::string filename, std::string text_that_we_will_add);
+int delete_file(std::string filename);
 
 int main(void) {
 	std::cout << "Enter the file name, you will add the exentsion later: " << std::endl;
@@ -40,7 +41,9 @@ int start(std::string filename, std::string text_that_we_will_add) {
 	}
 		
 	std::cout << lines.size() << std::endl;
-	if (lines.size() < 69) return 2;
+	if (lines.size() < 69) {
+
+	}
 
 	for (size_t i = 0; i < lines.size(); i++) {
 		if (i == 2 || i == 17 || i == 66 || i == 68) {
@@ -59,4 +62,8 @@ int start(std::string filename, std::string text_that_we_will_add) {
 
 	file.close();
 	return 0;
+}
+
+int delete_file(std::string filename) {
+	
 }
