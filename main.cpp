@@ -1,11 +1,11 @@
-#include <algorithm>
-#include <cstddef>
+#include <algorithm> 
 #include <fstream>
 #include <iostream>
 #include <iterator>
 #include <ostream>
 #include <string>
 #include <vector>
+#include <cstdio>
 
 int start(std::string filename, std::string text_that_we_will_add);
 int delete_file(std::string filename);
@@ -64,6 +64,9 @@ int start(std::string filename, std::string text_that_we_will_add) {
 	return 0;
 }
 
-int delete_file(std::string filename) {
+int delete_fle(std::string filename) {
+	std::string new_filename = (filename + "~").c_str();
+	std::rename(filename, new_filename);
 	
+	return 0;
 }
